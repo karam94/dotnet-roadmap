@@ -66,3 +66,17 @@ public static class Calculator
         return Square(a) + Square(b);
     }
 }
+
+public partial class Person
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+}
+
+public partial class Person
+{
+    public void PrintName()
+    {
+        Console.WriteLine($"Name: {FirstName} {LastName}");
+    }
+}

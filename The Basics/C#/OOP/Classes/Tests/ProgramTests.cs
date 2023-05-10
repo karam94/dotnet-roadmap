@@ -94,5 +94,24 @@ namespace ClassesTests
                 consoleOutput.Dispose();
             }
         }
+        
+        [Fact]
+        public void PrintName_ShouldPrintCorrectly()
+        {
+            // Arrange
+            var person = new Person
+            {
+                FirstName = "John",
+                LastName = "Doe"
+            };
+            
+            var expected = "Name: John Doe";
+
+            // Act
+            var result = CaptureConsoleOutput(() => person.PrintName());
+            
+            // Assert
+            Assert.Equal(expected, result);
+        }
     }
 }
